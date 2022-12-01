@@ -1,9 +1,4 @@
-<!-- En tu empresa te han encargado realizar una página web para la Asociación Deportiva de Cesur. Estará elaborada en HTML y CSS y tendrá las siguientes 
-caracterís:cas estructurales (puedes reu:lizar plan:llas descargadas de Internet si lo deseas): unencabezado y un pie, dos columnas laterales y un cuerpo central.
-El encabezado tendrá un menú que deberás ir completando a lo largo de las unidades. -->
-<!-- Path: utilidades.html -->
- 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -12,6 +7,7 @@ El encabezado tendrá un menú que deberás ir completando a lo largo de las uni
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="shortcut icon" href="img/cesur.png">
         <script language="JavaScript" type="text/javascript" src="js/imc.js"></script>
+        <script language="JavaScript" type="text/javascript" src="js/fcm.js"></script>
     </head>
     <body>
         <header>
@@ -28,12 +24,38 @@ El encabezado tendrá un menú que deberás ir completando a lo largo de las uni
             <div>
                 <h3>Calculadora de IMC</h3>
                 <p>Si quieres saber tu IMC, rellena el siguiente formulario:</p>
-                <form name="imc" action="utilidades.html" method="post">
-                    <label for="peso">Peso (kg):</label>
-                    <input type="number" name="peso" id="peso" oninput="prompt('Introduce tu peso en kg')" min="0" max="300" required>
-                    <label for="altura">Altura (m):</label>
-                    <input type="number" name="altura" id="altura" oninput="prompt('Introduce tu altura en centímetros')" min="0" max="300" required>
-                    <button onclick="calcularIMC()">Calcular &raquo;</button>
+                <form name="imc" action="index.html" method="post">
+                    <p>Escribe tu peso en kg: <input type="text" name="peso" id="peso" required></p>
+                    <p>Escribe tu altura en cm: <input type="text" name="altura" id="altura" required></p>
+                    
+                    <span id="imc"></span>
+                    <span id="mostrarIMC"></span>
+
+                    <input id="calcular" type="button" onclick="calcularIMC()" value="Calcular &raquo;">
+                </form>
+            </div>
+            <div>
+                <h3>Calculadora de FCM</h3>
+                <p>Si quieres saber tu FCM, rellena el siguiente formulario:</p>
+                <form name="fcm" action="index.html" method="post">
+                    <p>Escribe tu edad: <input type="text" name="edad" id="edad" required></p>
+                    <p>Escribe tu sexo (Hombre = 1, Mujer = 2): <input type="text" name="sexo" id="sexo" required></p>
+
+                    <span id="fcmH"></span>
+                    <span id="mostrarFCM"></span>
+
+                    <input id="mostrarFCM" type="button" onclick="calcularFCM()" value="Calcular &raquo;">
+                </form>
+            </div>
+            <div>
+                <h3>Calculadora de categoría</h3>
+                <p>Si quieres saber tu categoría, rellena el siguiente formulario:</p>
+                <form name="categoria" action="index.html" method="post">
+                    <p>Escribe tu año de nacimiento <input type="text" name="anioNacimiento" id="anioNacimiento" required></p>
+
+                    <span id="mostrarCategoria"></span>
+
+                    <input id="calcular3" type="button" onclick="calcularCategoria()" value="Calcular &raquo;">
                 </form>
             </div>
         </main>
