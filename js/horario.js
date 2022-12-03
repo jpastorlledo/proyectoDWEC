@@ -22,3 +22,28 @@ function mostrarManana() {
 
     valores.innerHTML = codigo;
 }
+
+function mostrarTarde() {
+
+    let valores = document.getElementById("tablaTarde");
+
+    let codigo = "";
+
+    codigo += "<table border='2'>";
+
+    codigo += "<tr><th></th><th>Lunes</th><th>Martes</th><th>Miercoles</th><th>Jueves</th><th>Viernes</th></tr>";
+
+    for (let i = 16; i < 21; i+=1) {
+        codigo += "<tr>";
+        codigo += "<th>" + i + ":00-" + (i + 1) + ":00</th>";
+
+        for (let j = 0; j < 5; j++) {
+            codigo += "<td></td>";
+        }
+        codigo += "</tr>";
+    }
+
+    codigo += "</table>";
+
+    valores.innerHTML = codigo;
+}
