@@ -8,6 +8,8 @@
         <link rel="shortcut icon" href="img/cesur.png">
         <script language="JavaScript" type="text/javascript" src="js/imc.js"></script>
         <script language="JavaScript" type="text/javascript" src="js/fcm.js"></script>
+        <script language="JavaScript" type="text/javascript" src="js/categoria.js"></script>    
+        <script language="JavaScript" type="text/javascript" src="js/horario.js"></script>
     </head>
     <body>
         <header>
@@ -55,14 +57,20 @@
 
                     <span id="mostrarCategoria"></span>
 
-                    <input id="calcular3" type="button" onclick="calcularCategoria()" value="Calcular &raquo;">
+                    <input id="mostrarCategoria" type="button" onclick="calcularCategoria()" value="Calcular &raquo;">
                 </form>
+            </div>
+            <div>
+                <h3>Horarios</h3>
+                <input type="button" value="Horario mañana" onclick="mostrarManana()">
+                <span id="tablaManana"></span>
             </div>
         </main>
         <footer>
             <p>Asociación Deportiva de Cesur</p>
             &copy; Copyright 2022, Todos los derechos reservados
         </footer>
+
     </body>
 </html>
    
