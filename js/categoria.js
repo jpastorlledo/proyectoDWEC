@@ -6,52 +6,52 @@ function calcularCategoria(){
     let texto = "";
     // mostrarCategoria.innerHTML = anio;
 
-    if(anio<=5 && anio>=0){
-        texto += "<b>Micros</b>";
+    if(anio>=0 && anio<=5){
+        texto += "<b>Micros</b><br>";
     } else{
-        texto += "Micros";
+        texto += "Micros<br>";
     }
 
     if(anio>=6 && anio<=7){
-        texto += "<b>Prebenjamín</b>";
+        texto += "<b>Prebenjamín</b><br>";
     } else{ 
-        texto += "Prebenjamín";
+        texto += "Prebenjamín<br>";
     }
 
     if(anio>=8 && anio<=9){
-        texto += "<b>Benjamín</b>";
+        texto += "<b>Benjamín</b><br>";
     } else{
-        texto += "Benjamín";
+        texto += "Benjamín<br>";
     }
 
     if(anio>=10 && anio<=11){
-        texto += "<b>Alevín</b>";
+        texto += "<b>Alevín</b><br>";
     } else{
-        texto += "Alevín";
+        texto += "Alevín<br>";
     }
 
     if(anio>=12 && anio<=13){
-        texto += "<b>Infantil</b>";
+        texto += "<b>Infantil</b><br>";
     } else{
-        texto += "Infantil";
+        texto += "Infantil<br>";
     }
 
     if(anio>=14 && anio<=15){
-        texto += "<b>Cadete</b>";
+        texto += "<b>Cadete</b><br>";
     } else{
-        texto += "Cadete";
+        texto += "Cadete<br>";
     }
 
     if(anio>=16 && anio<=18){
-        texto += "<b>Juvenil</b>";
+        texto += "<b>Juvenil</b><br>";
     } else{
-        texto += "Juvenil";
+        texto += "Juvenil<br>";
     }
 
     if(anio>=19){
-        texto += "<b>Senior</b>";
+        texto += "<b>Senior</b><br>";
     } else{
-        texto += "Senior";
+        texto += "Senior<br>";
     }
 
     mostrarCategoria.innerHTML = texto;
