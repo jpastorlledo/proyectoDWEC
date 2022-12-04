@@ -4,69 +4,72 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cesur - Inicio</title>
-        <link rel="stylesheet" href="css/estilos.css">
-        <link rel="shortcut icon" href="img/cesur.png">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="shortcut icon" href="img/logo.png">
         <script language="JavaScript" type="text/javascript" src="js/imc.js"></script>
         <script language="JavaScript" type="text/javascript" src="js/fcm.js"></script>
         <script language="JavaScript" type="text/javascript" src="js/categoria.js"></script>    
         <script language="JavaScript" type="text/javascript" src="js/horario.js"></script>
     </head>
     <body>
-        <header>
-            <img src="img/cesur.png" alt="Logo Cesur" width="100px">
-            <h1>Asociación Deportiva de Cesur</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+        <header id="cabecera" class="flex-container">
+            <div>
+                <img src="img/cesur.svg" alt="logo">
+                <h1>Asociación deportiva Cesur</h1>
+                <nav>
+                    <a href="index.html" class="activo">Inicio</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+            <div class="cabecera2"></div>
         </header>
         <main>
-            <div>
-                <h3>Calculadora de IMC</h3>
-                <p>Si quieres saber tu IMC, rellena el siguiente formulario:</p>
-                <form name="imc" action="index.html" method="post">
-                    <p>Escribe tu peso en kg: <input type="text" name="peso" id="peso" required></p>
-                    <p>Escribe tu altura en cm: <input type="text" name="altura" id="altura" required></p>
-                    
-                    <span id="imc"></span>
-                    <span id="mostrarIMC"></span>
-
-                    <input id="calcular" type="button" onclick="calcularIMC()" value="Calcular &raquo;">
-                </form>
-            </div>
-            <div>
-                <h3>Calculadora de FCM</h3>
-                <p>Si quieres saber tu FCM, rellena el siguiente formulario:</p>
-                <form name="fcm" action="index.html" method="post">
-                    <p>Escribe tu edad: <input type="text" name="edad" id="edad" required></p>
-                    <p>Escribe tu sexo (Hombre = 1, Mujer = 2): <input type="text" name="sexo" id="sexo" required></p>
-
-                    <span id="fcmH"></span>
-                    <span id="mostrarFCM"></span>
-
-                    <input id="mostrarFCM" type="button" onclick="calcularFCM()" value="Calcular &raquo;">
-                </form>
-            </div>
-            <div>
-                <h3>Calculadora de categoría</h3>
+            <article class="flex-container">
+                <div class="tarjeta">
+                        <h2>Calculadora de IMC</h2>
+                        <p>Si quieres saber tu IMC, rellena el siguiente formulario:</p>
+                        <form name="imc" action="index.html" method="post">
+                            <p>Escribe tu peso en kg: <input type="text" name="peso" id="peso" required></p>
+                            <p>Escribe tu altura en cm: <input type="text" name="altura" id="altura" required></p>
+                            
+                            <span id="imc"></span>
+                            <span id="mostrarIMC"></span>
+                            
+                            <input id="calcular" class="boton" type="button" onclick="calcularIMC()" value="Calcular &raquo;">
+                        </form>
+                </div>
+                <div class="tarjeta">
+                    <h2>Calculadora de FCM</h2>
+                    <p>Si quieres saber tu FCM, rellena el siguiente formulario:</p>
+                    <form name="fcm" action="index.html" method="post">
+                        <p>Escribe tu edad: <input type="text" name="edad" id="edad" required></p>
+                        <p>Escribe tu sexo (Hombre = 1, Mujer = 2): <input type="text" name="sexo" id="sexo" required></p>
+                        
+                        <span id="fcmH"></span>
+                        <span id="mostrarFCM"></span>
+                        
+                        <input id="mostrarFCM" class="boton" type="button" onclick="calcularFCM()" value="Calcular &raquo;">
+                    </form>
+                </div>
+                <div class="tarjeta">
+                <h2>Calculadora de categoría</h2>
                 <p>Si quieres saber tu categoría, rellena el siguiente formulario:</p>
                 <form name="categoria" action="index.html" method="post">
-                    <p>Escribe tu año de nacimiento <input type="text" name="anioNacimiento" id="anioNacimiento" required></p>
-
+                    <p>Escribe tu año de nacimiento: <input type="text" name="anioNacimiento" id="anioNacimiento" required></p>
+                    
                     <span id="mostrarCategoria"></span>
-
-                    <input id="mostrarCategoria" type="button" onclick="calcularCategoria()" value="Calcular &raquo;">
+                    
+                    <input id="mostrarCategoria" class="boton" type="button" onclick="calcularCategoria()" value="Calcular &raquo;">
                 </form>
-            </div>
-            <div>
-                <h3>Horarios</h3>
-                <input type="button" value="Horario mañana" onclick="mostrarManana()">
-                <span id="tablaManana"></span>
-                <input type="button" value="Horario tarde" onclick="mostrarTarde()">
-                <span id="tablaTarde"></span>
-            </div>
+                </div>
+                <div class="tarjeta">
+                    <h2>Horarios</h2>
+                    <input id="horario" class="boton" type="button" value="Horario mañana" onclick="mostrarManana()">
+                    <span id="tablaManana"></span>
+                    <input id="horario" class="boton" type="button" value="Horario tarde" onclick="mostrarTarde()">
+                    <span id="tablaTarde"></span>
+                </div>
+            </article>
         </main>
         <footer>
             <p>Asociación Deportiva de Cesur</p>
